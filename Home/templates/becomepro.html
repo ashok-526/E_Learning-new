@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<!-- Include Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<style>
+  /* =============================
+     LAYOUT & SPACING
+  ============================== */
+  .upgrade-section {
+    padding: 2rem 0; /* Reduced vertical space a bit */
+    background-color: #f8f9fa; /* Light gray background */
+  }
+
+  .upgrade-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1000px; /* narrower container */
+  }
+
+  .upgrade-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .upgrade-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  /* =============================
+     COLUMN SEPARATION & IMAGES
+  ============================== */
+  .benefits-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .benefits-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem; /* space for checkmark */
+  }
+
+  .benefits-list li::before {
+    content: "✓";
+    color: #28a745; /* green checkmark */
+    position: absolute;
+    left: 0;
+  }
+
+  .feature-graphic {
+    max-width: 80%; /* smaller image */
+    display: block;
+    margin: 2rem auto 0 auto; /* center the image */
+    border-radius: 6px;
+  }
+
+  /* =============================
+     FORM & STRIPE ELEMENTS
+  ============================== */
+  .StripeElement {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+
+  .StripeElement--focus {
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+    border-color: #80bdff;
+  }
+
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
+  .price-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #28a745;
+  }
+
+  .plan-label {
+    font-weight: 600;
+  }
+
+  .discount-feedback {
+    font-size: 0.9rem;
+    color: #28a745;
+    margin-top: 0.25rem;
+  }
+
+  /* =============================
+     BUTTONS & INPUTS
+  ============================== */
+  .btn-subscribe {
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+    padding: 0.75rem;
+  }
+
+  .discount-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Custom smaller "Apply Code" button */
+  .btn-discount-apply {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+</style>
+
+<section class="upgrade-section">
+  <div class="upgrade-container">
+    <div class="row">
+      <!-- LEFT COLUMN: Why Go Pro -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h1 class="upgrade-title">Go PRO</h1>
+        <p class="upgrade-subtitle">
+          Unlock exclusive benefits, gain access to premium features, and elevate your experience.
+        </p>
+        <ul class="benefits-list">
+          <li>Premium content & advanced tutorials</li>
+          <li>Priority support & faster response times</li>
+          <li>Exclusive community events and webinars</li>
+          <li>Early access to beta features</li>
+        </ul>
+        <img 
+          src="https://img.freepik.com/free-vector/online-registration-concept-illustration_52683-52696.jpg?w=826&t=st=1698533388~exp=1698533988~hmac=b1e48173425186f367292b4b1321bcb553fed42537249a5c5ea1e146c63fb524"
+          alt="Pro Membership"
+          class="feature-graphic"
+        >
+      </div>
+
+      <!-- RIGHT COLUMN: Payment Form -->
+      <div class="col-md-6">
+        <form id="payment-form" method="post">
+          {% csrf_token %}
+
+          <!-- Plan Selection -->
+          <h5 class="mb-3">Choose Your Plan:</h5>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="membership"
+              id="monthly-option"
+              value="Monthly"
+              checked
+            >
+            <label class="form-check-label plan-label" for="monthly-option">
+              Monthly - ₹999
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="membership"
+              id="yearly-option"
+              value="Yearly"
+            >
+            <label class="form-check-label plan-label" for="yearly-option">
+              Yearly - ₹9,999
+            </label>
+          </div>
+
+          <!-- Pricing Display -->
+          <div class="mb-3">
+            <span class="d-block">Total:</span>
+            <span id="display-price" class="price-label">₹999</span>
+          </div>
+
+          <!-- Discount Code (optional) -->
+          <div class="discount-group">
+            <label for="discount-code" class="d-block">Have a discount code?</label>
+            <input
+              type="text"
+              id="discount-code"
+              class="form-control"
+              placeholder="Enter code (e.g. SAVE10)"
+            >
+            <button
+              type="button"
+              id="apply-discount-btn"
+              class="btn btn-primary btn-sm btn-discount-apply"
+            >
+              Apply Code
+            </button>
+          </div>
+
+          <!-- Feedback for discount -->
+          <div id="discount-feedback" class="discount-feedback" style="display: none;">
+            Discount applied successfully!
+          </div>
+
+          <!-- Card Element -->
+          <div class="form-group mb-3">
+            <label for="card-element" class="font-weight-bold">Credit or Debit Card</label>
+            <div id="card-element" class="StripeElement"></div>
+            <div id="card-errors" role="alert" class="text-danger mt-2"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button id="submit-button" class="btn btn-success btn-subscribe">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ==============================
+  //  Stripe Initialization
+  // ==============================
+  var stripe = Stripe("pk_test_51QZc7yBM7NScklL7E4wUuaU11PD3XaP3ypUTTRDbm175hQVPkSlKlSczzLwskZ3zSVDmJPntTNv9hnwvKoi3NFOc00yEe5gL2v");
+  var elements = stripe.elements();
+
+  var style = {
+    base: {
+      color: "#32325d",
+      fontFamily: "sans-serif",
+      fontSmoothing: "antialiased",
+      fontSize: "16px",
+      "::placeholder": { color: "#aab7c4" }
+    },
+    invalid: {
+      color: "#fa755a",
+      iconColor: "#fa755a"
+    }
+  };
+
+  var card = elements.create("card", { style: style });
+  card.mount("#card-element");
+
+  card.on("change", function(event) {
+    var displayError = document.getElementById("card-errors");
+    if (event.error) {
+      displayError.textContent = event.error.message;
+    } else {
+      displayError.textContent = "";
+    }
+  });
+
+  // ==============================
+  //  Pricing & Discount Logic
+  // ==============================
+  var monthlyPrice = 999;
+  var yearlyPrice = 9999;
+  var discountCodes = {
+    "SAVE10": 0.1,
+    "WELCOME": 0.15
+  };
+
+  var displayPrice = document.getElementById("display-price");
+  var monthlyOption = document.getElementById("monthly-option");
+  var yearlyOption = document.getElementById("yearly-option");
+  var discountInput = document.getElementById("discount-code");
+  var applyDiscountBtn = document.getElementById("apply-discount-btn");
+  var discountFeedback = document.getElementById("discount-feedback");
+  var currentPrice = monthlyPrice;
+
+  function updatePrice() {
+    currentPrice = monthlyOption.checked ? monthlyPrice : yearlyPrice;
+    displayPrice.textContent = "₹" + currentPrice;
+  }
+
+  monthlyOption.addEventListener("change", updatePrice);
+  yearlyOption.addEventListener("change", updatePrice);
+
+  applyDiscountBtn.addEventListener("click", function() {
+    discountFeedback.style.display = "none"; // reset feedback
+    updatePrice(); // ensure currentPrice is set based on membership type
+
+    var code = discountInput.value.trim().toUpperCase();
+    if (code && discountCodes[code]) {
+      var discountRate = discountCodes[code];
+      var discounted = currentPrice - (currentPrice * discountRate);
+      currentPrice = discounted;
+      displayPrice.textContent = "₹" + discounted.toFixed(2);
+      discountFeedback.style.display = "block";
+    } else if (code) {
+      alert("Invalid discount code!");
+    }
+  });
+
+  // ==============================
+  //  Form Submission
+  // ==============================
+  var form = document.getElementById("payment-form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    stripe.createToken(card).then(function(result) {
+      if (result.error) {
+        document.getElementById("card-errors").textContent = result.error.message;
+      } else {
+        stripeTokenHandler(result.token);
+      }
+    });
+  });
+
+  function stripeTokenHandler(token) {
+    // Insert the token & final price into the form
+    var hiddenToken = document.createElement("input");
+    hiddenToken.setAttribute("type", "hidden");
+    hiddenToken.setAttribute("name", "stripeToken");
+    hiddenToken.setAttribute("value", token.id);
+    form.appendChild(hiddenToken);
+
+    var hiddenPrice = document.createElement("input");
+    hiddenPrice.setAttribute("type", "hidden");
+    hiddenPrice.setAttribute("name", "finalPrice");
+    hiddenPrice.setAttribute("value", currentPrice);
+    form.appendChild(hiddenPrice);
+
+    form.submit();
+  }
+</script>
+
+{% endblock %}

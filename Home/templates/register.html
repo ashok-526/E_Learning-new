@@ -1,0 +1,357 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* --------------------------------------------------
+       RESET & GLOBAL STYLES
+    -------------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden; /* Hide scrollbar if not needed */
+    }
+
+    /* --------------------------------------------------
+       BACKGROUND - LIGHT PURPLE & RAINING BUBBLES
+    -------------------------------------------------- */
+    body {
+      /* A soft purple gradient background with slow shifting */
+      background: linear-gradient(120deg, #E8DFF5, #D9C4ED, #C9B7E8);
+      background-size: 180% 180%;
+      animation: gradientShift 15s ease infinite;
+      position: relative;
+      color: #fff;
+    }
+
+    /* Optional gradient shifting animation */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Bubbles falling from the top */
+    .bubble {
+      position: absolute;
+      top: -80px; /* Start slightly off-screen */
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+      animation: bubbleFall linear infinite;
+      pointer-events: none; /* So user can't interact with bubbles */
+      z-index: 1; /* Behind the form but above the background */
+    }
+
+    /* Moves each bubble downward while slightly shrinking & fading */
+    @keyframes bubbleFall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    /* Each bubble has unique size, timing, delay for variation */
+    .bubble1 {
+      left: 15%;
+      width: 40px;
+      height: 40px;
+      animation-duration: 10s;
+      animation-delay: 0s;
+    }
+    .bubble2 {
+      left: 35%;
+      width: 60px;
+      height: 60px;
+      animation-duration: 14s;
+      animation-delay: 2s;
+    }
+    .bubble3 {
+      left: 55%;
+      width: 35px;
+      height: 35px;
+      animation-duration: 11s;
+      animation-delay: 4s;
+    }
+    .bubble4 {
+      left: 70%;
+      width: 50px;
+      height: 50px;
+      animation-duration: 9s;
+      animation-delay: 1s;
+    }
+    .bubble5 {
+      left: 85%;
+      width: 55px;
+      height: 55px;
+      animation-duration: 15s;
+      animation-delay: 3s;
+    }
+    /* Add more .bubbles if desired */
+
+    /* --------------------------------------------------
+       SIGN-UP SECTION & FORM BOX
+    -------------------------------------------------- */
+    section {
+      /* We center everything vertically & horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      z-index: 5; /* Keep it above the bubbles */
+    }
+
+    .form-box {
+      position: relative;
+      width: 400px;
+      min-height: 450px;
+      padding: 2rem 1.5rem; /* so content isn't too snug */
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
+    .form-value {
+      width: 100%;
+    }
+
+    /* --------------------------------------------------
+       FORM HEADINGS & TEXT
+    -------------------------------------------------- */
+    h2 {
+      font-size: 2em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --------------------------------------------------
+       INPUTS
+    -------------------------------------------------- */
+    .inputbox {
+      position: relative;
+      margin: 25px 0;
+      width: 310px;
+      border-bottom: 2px solid #fff;
+    }
+    .inputbox label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 1em;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    .inputbox input {
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      padding: 0 35px 0 5px;
+      color: #fff;
+    }
+    /* Lift label on focus or valid input */
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -5px;
+      font-size: 0.85em;
+    }
+
+    .inputbox ion-icon {
+      position: absolute;
+      right: 8px;
+      color: #fff;
+      font-size: 1.2em;
+      top: 20px;
+    }
+
+    /* --------------------------------------------------
+       "FORGET" SECTION (Checkbox + Link)
+    -------------------------------------------------- */
+    .forget {
+      margin: -15px 0 15px;
+      font-size: 0.9em;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .forget label input {
+      margin-right: 3px;
+      accent-color: #fff; /* In modern browsers, sets the checkbox color */
+    }
+    .forget a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .forget a:hover {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       BUTTON & REGISTER TEXT
+    -------------------------------------------------- */
+    button {
+      width: 100%;
+      height: 45px;
+      border-radius: 40px;
+      background: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      color: #3c3c3c;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #f2f2f2;
+    }
+
+    .register {
+      font-size: 0.9em;
+      color: #fff;
+      text-align: center;
+      margin: 25px 0 10px;
+    }
+    .register p a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+    .register p a:hover {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       RESPONSIVE ADJUSTMENTS
+    -------------------------------------------------- */
+    @media (max-width: 480px) {
+      .form-box {
+        width: 85%;
+        padding: 1.5rem;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      .inputbox {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- BUBBLES -->
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
+  <div class="bubble bubble5"></div>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <h2>Sign up</h2>
+
+          {% if messages %}
+            <div class="alert alert-primary" role="alert">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <!-- Email -->
+          <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <!-- Username -->
+          <div class="inputbox">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" name="username" required />
+            <label>Username</label>
+          </div>
+          <!-- Password -->
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="password" required />
+            <label>Password</label>
+          </div>
+
+          <!-- Remember Me / Forgot Password -->
+          <div class="forget">
+            <label>
+              <input type="checkbox" />
+              Remember Me
+            </label>
+            <a href="#">Forget Password</a>
+          </div>
+
+          <button type="submit">Sign up</button>
+
+          <!-- Already Registered -->
+          <div class="register">
+            <p>
+              Already have an account?
+              <a href="{% url 'login' %}">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+
+  <!-- Ionicons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubble Rain - Light Purple Vibe</title>
+
+  <!-- Google Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- Correct static reference for CSS (update the path as needed) -->
+  <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
+  <style>
+    /* --------------------------------------------------
+       RESET & GLOBAL STYLES
+    -------------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden; /* hides scrolling if not needed */
+      color: #3c3c3c;
+    }
+
+    /* --------------------------------------------------
+       BACKGROUND - LIGHT PURPLE GRADIENT
+    -------------------------------------------------- */
+    body {
+      background: linear-gradient(120deg, #E8DFF5, #D9C4ED, #C9B7E8);
+      background-size: 180% 180%;
+      animation: gradientShift 15s ease infinite;
+      position: relative; /* to place bubbles absolutely within body */
+    }
+
+    /* Subtle gradient animation */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* --------------------------------------------------
+       RAINING BUBBLES
+    -------------------------------------------------- */
+    .bubble {
+      position: absolute;
+      top: -100px; /* start slightly off-screen */
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: bubbleFall linear infinite;
+      pointer-events: none; /* so user can't interact with bubbles */
+      /* optional drop-shadow for dimension */
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Generic fall animation: moves bubble down the screen & fades out */
+    @keyframes bubbleFall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) scale(0.7); /* move beyond screen height */
+        opacity: 0;
+      }
+    }
+
+    /* Multiple unique bubbles */
+    .bubble1 {
+      left: 10%;
+      width: 40px;
+      height: 40px;
+      animation-duration: 10s;
+      animation-delay: 0s;
+    }
+    .bubble2 {
+      left: 30%;
+      width: 60px;
+      height: 60px;
+      animation-duration: 13s;
+      animation-delay: 2s;
+    }
+    .bubble3 {
+      left: 50%;
+      width: 35px;
+      height: 35px;
+      animation-duration: 11s;
+      animation-delay: 4s;
+    }
+    .bubble4 {
+      left: 70%;
+      width: 45px;
+      height: 45px;
+      animation-duration: 9s;
+      animation-delay: 1s;
+    }
+    .bubble5 {
+      left: 90%;
+      width: 55px;
+      height: 55px;
+      animation-duration: 15s;
+      animation-delay: 3s;
+    }
+
+    /* --------------------------------------------------
+       NAVIGATION BAR
+    -------------------------------------------------- */
+    .navbar {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 20; /* Increased to ensure it's above other elements */
+      display: flex;
+      gap: 1rem;
+    }
+    .menu-item {
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.65rem 1.2rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(3px);
+      border-radius: 25px;
+      color: #333;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .menu-item:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* --------------------------------------------------
+       HERO SECTION
+    -------------------------------------------------- */
+    .hero {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 10%;
+      position: relative;
+      z-index: 15; /* Ensure it's above the navbar */
+    }
+    .slogan {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2F2F4F;
+      /* subtle text shadow for some pop */
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    }
+    .subtext {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .action-button {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      background-color: #BCA9E9; /* A light purple tone */
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(188, 169, 233, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none; /* Ensure it looks like a button */
+      /* Ensure it's above other elements if necessary */
+      z-index: 20;
+    }
+    .action-button:hover {
+      background-color: #A894DD;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(188, 169, 233, 0.6);
+    }
+
+    /* --------------------------------------------------
+       RESPONSIVE DESIGN
+    -------------------------------------------------- */
+    @media screen and (max-width: 768px) {
+      .navbar {
+        right: 1rem;
+      }
+      .slogan {
+        font-size: 2rem;
+      }
+      .subtext {
+        font-size: 1rem;
+      }
+      .hero {
+        padding-left: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Bubbles -->
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
+  <div class="bubble bubble5"></div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="{% url 'login' %}" class="menu-item">Login</a>
+    <a href="{% url 'register' %}" class="menu-item">Sign Up</a>
+  </div>
+
+  <!-- Main Hero Section -->
+  <div class="hero">
+    <h1 class="slogan">Learn Anytime,<br>Anywhere.</h1>
+    <p class="subtext">
+      Elevate Your Knowledge and Empower Your Learning Today!<br>
+      Whether you’re a seasoned professional or just starting out, our platform has the resources 
+      and flexibility you need to succeed.
+    </p>
+    <!-- Option A: Using an <a> tag styled as a button -->
+    <a href="{% url 'register' %}" class="action-button">Get Started</a>
+
+    <!-- Option B: Using a <button> with JavaScript (uncomment if preferred) -->
+    <!-- <button class="action-button" onclick="location.href='{% url 'register' %}'">Get Started</button> -->
+  </div>
+</body>
+</html>

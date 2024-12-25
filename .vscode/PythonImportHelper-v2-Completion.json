@@ -1,0 +1,881 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "staticfiles_urlpatterns",
+        "importPath": "django.contrib.staticfiles.urls",
+        "description": "django.contrib.staticfiles.urls",
+        "isExtraImport": true,
+        "detail": "django.contrib.staticfiles.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "ckeditor.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "RichTextField",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "isExtraImport": true,
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_protect",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "stripe",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "stripe",
+        "description": "stripe",
+        "detail": "stripe",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "E_Learning.asgi",
+        "description": "E_Learning.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "E_Learning.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nfrom dotenv import load_dotenv\nimport os\nload_dotenv()\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY')\nSTRIPE_SECRET_KEY= os.environ.get('STRIPE_SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY')\nSTRIPE_SECRET_KEY= os.environ.get('STRIPE_SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'Home',",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'Home',\n    'ckeditor',\n]",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'E_Learning.urls'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "ROOT_URLCONF = 'E_Learning.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'E_Learning.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "E_Learning.urls",
+        "description": "E_Learning.urls",
+        "peekOfCode": "urlpatterns = [\n    path('' , include('Home.urls')),\n    path('admin/', admin.site.urls),\n]\nif settings.DEBUG:\n    urlpatterns+= static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)\nurlpatterns+= staticfiles_urlpatterns()",
+        "detail": "E_Learning.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "E_Learning.wsgi",
+        "description": "E_Learning.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "E_Learning.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0001_initial",
+        "description": "Home.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Course',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('course_name', models.CharField(max_length=40)),",
+        "detail": "Home.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0002_profile",
+        "description": "Home.migrations.0002_profile",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('Home', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='profile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "Home.migrations.0002_profile",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0003_rename_course_decription_course_course_description_and_more",
+        "description": "Home.migrations.0003_rename_course_decription_course_course_description_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0002_profile'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='course',\n            old_name='course_decription',\n            new_name='course_description',\n        ),",
+        "detail": "Home.migrations.0003_rename_course_decription_course_course_description_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0004_rename_course_description_course_course_decription_and_more",
+        "description": "Home.migrations.0004_rename_course_description_course_course_decription_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0003_rename_course_decription_course_course_description_and_more'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='course',\n            old_name='course_description',\n            new_name='course_decription',\n        ),",
+        "detail": "Home.migrations.0004_rename_course_description_course_course_decription_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0005_remove_coursemodule_video_url_coursemodule_video",
+        "description": "Home.migrations.0005_remove_coursemodule_video_url_coursemodule_video",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0004_rename_course_description_course_course_decription_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='coursemodule',\n            name='video_url',\n        ),\n        migrations.AddField(",
+        "detail": "Home.migrations.0005_remove_coursemodule_video_url_coursemodule_video",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0006_test",
+        "description": "Home.migrations.0006_test",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0005_remove_coursemodule_video_url_coursemodule_video'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Test',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('topic', models.CharField(max_length=20)),",
+        "detail": "Home.migrations.0006_test",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0007_rename_test_test_video",
+        "description": "Home.migrations.0007_rename_test_test_video",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0006_test'),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name='Test',\n            new_name='Test_video',\n        ),\n    ]",
+        "detail": "Home.migrations.0007_rename_test_test_video",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0008_delete_test_video",
+        "description": "Home.migrations.0008_delete_test_video",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0007_rename_test_test_video'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Test_video',\n        ),\n    ]",
+        "detail": "Home.migrations.0008_delete_test_video",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Home.migrations.0009_alter_coursemodule_video",
+        "description": "Home.migrations.0009_alter_coursemodule_video",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Home', '0008_delete_test_video'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='coursemodule',\n            name='video',\n            field=models.FileField(upload_to='video/%y'),\n        ),",
+        "detail": "Home.migrations.0009_alter_coursemodule_video",
+        "documentation": {}
+    },
+    {
+        "label": "HomeConfig",
+        "kind": 6,
+        "importPath": "Home.apps",
+        "description": "Home.apps",
+        "peekOfCode": "class HomeConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Home'",
+        "detail": "Home.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "kind": 6,
+        "importPath": "Home.models",
+        "description": "Home.models",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    is_pro = models.BooleanField(default=False)\n    pro_expiry_date = models.DateTimeField(null=True, blank=True)\n    subscription_type = models.CharField(\n        max_length=100, choices=SUBSCRIPTION, default=\"FREE\")\n    def __str__(self):\n        return self.user.username\nclass Course(models.Model):\n    course_name = models.CharField(max_length=40)",
+        "detail": "Home.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "kind": 6,
+        "importPath": "Home.models",
+        "description": "Home.models",
+        "peekOfCode": "class Course(models.Model):\n    course_name = models.CharField(max_length=40)\n    course_decription = RichTextField()\n    is_premium = models.BooleanField(default=False)\n    course_image = models.ImageField(upload_to='course')\n    slug = models.SlugField(blank=True)\n    def save(self, *agrs, **kwargs):\n        self.slug = slugify(self.course_name)  # for slug\n        super(Course, self).save(*agrs, **kwargs)  # to save nnicely\n    def __str__(self):",
+        "detail": "Home.models",
+        "documentation": {}
+    },
+    {
+        "label": "CourseModule",
+        "kind": 6,
+        "importPath": "Home.models",
+        "description": "Home.models",
+        "peekOfCode": "class CourseModule(models.Model):\n    course = models.ForeignKey(Course, on_delete=models.CASCADE)\n    course_module_name = models.CharField(max_length=40)\n    course_description = RichTextField()\n    video = models.FileField(upload_to=\"video/%y\")\n    # from module you can watch 2 out of 100 video for free\n    can_view = models.BooleanField(default=False)\n    def __str__(self):\n        return self.course_module_name",
+        "detail": "Home.models",
+        "documentation": {}
+    },
+    {
+        "label": "SUBSCRIPTION",
+        "kind": 5,
+        "importPath": "Home.models",
+        "description": "Home.models",
+        "peekOfCode": "SUBSCRIPTION = (\n    ('F', 'FREE'),\n    ('M', 'Monthly'),\n    ('Y', 'Yearly'))\nclass Profile(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    is_pro = models.BooleanField(default=False)\n    pro_expiry_date = models.DateTimeField(null=True, blank=True)\n    subscription_type = models.CharField(\n        max_length=100, choices=SUBSCRIPTION, default=\"FREE\")",
+        "detail": "Home.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Home.urls",
+        "description": "Home.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', fst , name='fst'),\n    path('home/', home , name='home'),\n    path('course/<slug>/', view_course , name='course'),\n    path('become_pro/', become_pro , name='become_pro'),\n    path('payment/', payment, name='payment'),\n    path('success_page/', success_page , name='success_page'),\n    path('login/', login_page , name='login'),\n    path('register/', register_page, name='register'),\n    path('logout/', logout_page, name='logout'),",
+        "detail": "Home.urls",
+        "documentation": {}
+    },
+    {
+        "label": "fst",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def fst(request):\n    return render(request, '1st.html')\ndef login_page(request):\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = User.objects.filter(username=username).first()\n        if user is None:\n            messages.error(request, \"User does not exist!\")\n            return redirect('/login/')",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_page",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def login_page(request):\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = User.objects.filter(username=username).first()\n        if user is None:\n            messages.error(request, \"User does not exist!\")\n            return redirect('/login/')\n        else:\n            user = authenticate(username=username, password=password)",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "register_page",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def register_page(request):\n    if request.method == 'POST':\n        email = request.POST.get('email')\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = User.objects.filter(username=username).first()\n        if user:\n            messages.error(request, \"Username already exists!!\")\n            return redirect('/register')\n        else:",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "logout_page",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def logout_page(request):\n    logout(request)\n    messages.info(request, \"Logout successfully\")\n    return redirect('/login')\ndef success_page(request):\n    return render(request, 'success_page.html')\n@login_required(login_url=\"/login/\")\ndef home(request):\n    courses = Course.objects.all()\n    context = {'courses': courses}",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "success_page",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def success_page(request):\n    return render(request, 'success_page.html')\n@login_required(login_url=\"/login/\")\ndef home(request):\n    courses = Course.objects.all()\n    context = {'courses': courses}\n    if request.user.is_authenticated:\n        profile = Profile.objects.filter(user=request.user).first()\n        print(profile)\n        if profile:",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def home(request):\n    courses = Course.objects.all()\n    context = {'courses': courses}\n    if request.user.is_authenticated:\n        profile = Profile.objects.filter(user=request.user).first()\n        print(profile)\n        if profile:\n            request.session['profile'] = profile.is_pro\n        print(request.user)\n        # Set a default value if the profile is not found",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "view_course",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def view_course(request, slug):\n    course = Course.objects.filter(slug=slug).first()\n    course_modules = CourseModule.objects.filter(course=course)\n    user_profile = Profile.objects.filter(user=request.user).first()\n    if user_profile.is_pro == True:\n        for module in course_modules:\n            module.can_view = True\n        print(\"True\")\n    else:\n        for module in course_modules:",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "become_pro",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def become_pro(request):\n    if request.method == 'POST':\n        membership = request.POST.get('membership', 'Monthly')\n        amount = 1000\n        if membership == 'Yearly':\n            amount = 11000\n            print(\"as\")\n        stripe.api_key = settings.STRIPE_SECRET_KEY\n        customer = stripe.Customer.create(\n            email=request.user.email,",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment",
+        "kind": 2,
+        "importPath": "Home.views",
+        "description": "Home.views",
+        "peekOfCode": "def payment(request):\n    return render(request, 'payment.html')",
+        "detail": "Home.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'E_Learning.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

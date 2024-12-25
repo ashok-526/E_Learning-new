@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% block start %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for Bootstrap -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS (Latest version) -->
+  <link 
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+    rel="stylesheet" 
+  />
+
+  <style>
+    :root {
+      --primary-color: #6930c3;   /* Main accent color */
+      --secondary-color: #64dfdf; /* Secondary accent color */
+      --light-bg: #fafafa;       /* Light background color */
+      --dark-bg: #111;           /* Dark background color */
+    }
+
+    /* Global reset & typography */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: var(--light-bg);
+      color: #333;
+    }
+
+    /* =========================
+       HERO SECTION WITH WAVE
+       ========================= */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 1rem 8rem; /* extra bottom padding to reveal wave shape */
+      background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+      );
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+    }
+    .hero .btn {
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      background: #fff;
+      color: var(--primary-color);
+      border: none;
+    }
+    .hero .btn:hover {
+      background: #e1e1e1;
+      color: var(--primary-color);
+    }
+
+    /* Wave shape at bottom of hero */
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+      transform: translateY(40px);
+    }
+    .hero-wave svg {
+      display: block;
+      width: 100%;
+      height: 120px;
+    }
+
+    /* ====================
+       COURSES SECTION
+       ==================== */
+    #courses {
+      padding: 3rem 0;
+    }
+    #courses h2.section-heading {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      color: var(--primary-color);
+    }
+
+    /* Course Card */
+    .course-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+      background-color: #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .course-card img.card-img-top {
+      height: 210px;
+      object-fit: cover;
+    }
+    .course-card .card-body {
+      padding: 1.25rem;
+    }
+    .course-card .badge {
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .course-card .badge.premium-badge {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+    .course-card .badge.free-badge {
+      background-color: var(--secondary-color);
+      color: #fff;
+    }
+    .course-card h5.card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0.75rem;
+    }
+    .course-card p.card-description {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .course-card a.btn-primary {
+      background: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .course-card a.btn-primary:hover {
+      background: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- ======================
+       HERO SECTION
+  ====================== -->
+  <section class="hero">
+    <h1>Transform Your Learning Experience</h1>
+    <p>
+      Join thousands of learners worldwide in accessing top-notch courses, expert guidance, and
+      engaging content across various domains—tech, design, business, and more.
+    </p>
+    <a href="#courses" class="btn">Start Learning</a>
+    
+    <!-- Wave SVG at the bottom -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path 
+          d="M0.00,49.98 C150.00,150.00 350.00,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+          style="fill:#fff;"
+        ></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ======================
+       COURSES SECTION
+  ====================== -->
+  <div id="courses" class="container">
+    <h2 class="section-heading">Our Latest Courses</h2>
+    <div class="row">
+      {% for c in courses %}
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="card course-card w-100">
+            <!-- Course Image -->
+            <img 
+              src="/media/{{ c.course_image }}" 
+              class="card-img-top" 
+              alt="{{ c.course_name }}"
+            />
+            <!-- Card Body -->
+            <div class="card-body">
+              {% if c.is_premium %}
+                <span class="badge premium-badge">Premium</span>
+              {% else %}
+                <span class="badge free-badge">Free</span>
+              {% endif %}
+              <h5 class="card-title">{{ c.course_name }}</h5>
+              <p class="card-description">
+                {{ c.course_description|safe }}
+              </p>
+              <a href="{% url 'course' c.slug %}" class="btn btn-primary mt-2">
+                View Course
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"
+  ></script>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RD1n3GMCe2eyJ6IvGVDxV02EiJ7z7M4BDXb1xjFj+fTh7CgtGA" 
+    crossorigin="anonymous"
+  ></script>
+  <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTzB18C3k9btrda4RX8rWdvE2zJZ2KMqkY0x0vLaRIBb5h1Lz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
+{% endblock %}

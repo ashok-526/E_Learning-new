@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+{% block start %}
+<!-- 
+  Make sure you have Bootstrap 5 (and optionally Font Awesome) included in your base.html 
+  or load them within this template if necessary.
+-->
+
+<!-- CUSTOM STYLES -->
+<style>
+  /* =================================
+     FONT & COLOR VARIABLES (EXAMPLES)
+  =================================== */
+  :root {
+    --primary-color: #6c63ff; /* Soft purple */
+    --secondary-color: #f9f9ff; /* Light background */
+    --text-color: #333;
+    --heading-color: #222;
+    --accent-color: #ff6584; /* Pink accent color */
+    --card-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+  }
+
+  /* =================================
+     HERO BANNER (WITH GRADIENT & IMAGE)
+  =================================== */
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 65vh; /* adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom right,
+        rgba(108, 99, 255, 0.6),
+        rgba(255, 101, 132, 0.6)
+      ),
+      url("/media/{{ course.course_image }}") center center / cover no-repeat;
+    background-blend-mode: overlay;
+    color: #fff;
+  }
+
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: var(--secondary-color);
+    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+    z-index: 1;
+  }
+
+  .hero-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-banner-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* =================================
+     COURSE INFO SECTION
+  =================================== */
+  .course-info-wrapper {
+    background: var(--secondary-color);
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* above the wave shape */
+  }
+
+  .course-info-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .course-info-wrapper p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  /* =================================
+     MODULES SECTION
+  =================================== */
+  .modules-section {
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 0 1rem;
+  }
+
+  .module-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+  }
+
+  .module-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover-shadow);
+  }
+
+  /* Module Header */
+  .module-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secondary-color);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .module-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--heading-color);
+  }
+
+  .module-badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+
+  .module-badge.bg-success {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  .module-badge.bg-danger {
+    background-color: #ffb400;
+    color: #fff;
+  }
+
+  /* Module Body */
+  .module-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .module-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Video container */
+  .module-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+  }
+
+  .module-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+  }
+
+  /* Two-column layout for module content */
+  .module-content-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .module-description-col {
+    flex: 1 1 50%;
+    min-width: 280px;
+    max-width: 600px;
+    padding: 1rem;
+  }
+
+  .module-video-col {
+    flex: 1 1 50%;
+    min-width: 280px;
+    max-width: 600px;
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner {
+      height: 50vh;
+    }
+
+    .hero-banner-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-banner-content p {
+      font-size: 1rem;
+    }
+
+    .module-content-row {
+      display: block; /* stack on small devices */
+    }
+    .module-description-col,
+    .module-video-col {
+      max-width: 100%;
+    }
+  }
+
+  /* =================================
+     DISABLE RIGHT-CLICK (OPTIONAL)
+  =================================== */
+  .no-right-click {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+</style>
+
+<!-- HERO BANNER -->
+<div class="hero-banner no-right-click">
+  <div class="hero-banner-content">
+    <!-- You can move the course title here if you prefer -->
+    <h1>{{ course.course_name }}</h1>
+    <p>{{ course.course_description|safe }}</p>
+  </div>
+</div>
+
+<!-- COURSE INFO SECTION -->
+<div class="course-info-wrapper">
+  <!-- Additional heading or text if you want -->
+  <h2>More About This Course</h2>
+  <p>
+    {{ course.course_description|safe }} 
+    <!-- You could highlight key points, 
+         or add other course-related info here. -->
+  </p>
+</div>
+
+<!-- MODULES SECTION -->
+<div class="modules-section">
+  {% for module in course_modules %}
+  <div class="card module-card no-right-click">
+    <!-- Module Header -->
+    <div class="module-card-header">
+      <h3 class="module-title">{{ module.course_name }}</h3>
+      {% if module.can_view %}
+        <span class="badge bg-success module-badge">Enjoy</span>
+      {% else %}
+        <span class="badge bg-danger module-badge">Buy Subscription</span>
+      {% endif %}
+    </div>
+
+    <!-- Module Content -->
+    <div class="module-content-row">
+      <!-- Description Column -->
+      <div class="module-description-col">
+        <div class="module-body">
+          <div class="module-description">
+            {{ module.course_description|safe }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Column (Conditional) -->
+      <div class="module-video-col">
+        {% if module.can_view %}
+          <div class="module-video-container">
+            <video 
+              class="module-video"
+              src="{{ module.video.url }}" 
+              type="video/mp4"
+              controls 
+              disablePictureInPicture 
+              oncontextmenu="return false;">
+            </video>
+          </div>
+        {% else %}
+          <div class="module-body">
+            <p class="text-muted">
+              <em>You must purchase a subscription to watch this video.</em>
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Disable right-click (optional) -->
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+{% endblock %}

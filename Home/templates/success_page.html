@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block start %}
+<style>
+  /* -------------------------------
+     Root Variables (Optional)
+  --------------------------------- */
+  :root {
+    --primary-color: #4e9f3d;
+    --accent-color: #d8e9a8;
+    --success-color: #28a745;
+    --text-color: #333;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+  }
+
+  /* -------------------------------
+     Global Styles
+  --------------------------------- */
+  body {
+    font-family: var(--body-font);
+    background: #f3f4f6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* -------------------------------
+     Thank You Section Wrapper
+  --------------------------------- */
+  .thanks-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+  }
+
+  /* Optional confetti-like shapes - purely decorative */
+  .confetti {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 4px;
+    animation: float 7s infinite ease-in-out;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .confetti:nth-child(2) {
+    left: 20%;
+    animation-delay: 0.5s;
+  }
+  .confetti:nth-child(3) {
+    left: 40%;
+    width: 15px;
+    height: 15px;
+    background: #f6dfeb;
+    animation-delay: 1s;
+  }
+  .confetti:nth-child(4) {
+    left: 60%;
+    width: 25px;
+    height: 25px;
+    background: #ffc0cb;
+    animation-delay: 0.2s;
+  }
+  .confetti:nth-child(5) {
+    left: 80%;
+    animation-delay: 1.2s;
+  }
+
+  @keyframes float {
+    0%   { top: -10%; transform: rotate(0deg); }
+    50%  { transform: rotate(180deg); }
+    100% { top: 110%; transform: rotate(360deg); }
+  }
+
+  /* -------------------------------
+     Thank You Card
+  --------------------------------- */
+  .thanks-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  /* Icon or Illustration */
+  .thanks-icon {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+  }
+
+  /* Title & Message */
+  .thanks-title {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+
+  .thanks-message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  /* Buttons */
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background-color: var(--success-color);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  .btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  /* Extra Info */
+  .extra-info {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #777;
+  }
+</style>
+
+<div class="thanks-section no-right-click">
+  <!-- Confetti Decor (optional) -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <div class="thanks-card">
+    <!-- Example icon (Font Awesome) -->
+    <i class="fas fa-check-circle thanks-icon"></i>
+    <!-- If you prefer an image/illustration:
+         <img src="{% static 'images/payment_success.svg' %}" alt="Success" style="width:80px;">
+    -->
+
+    <h1 class="thanks-title">Thank You for Your Payment!</h1>
+    <p class="thanks-message">
+      We’ve received your payment, and your subscription is now active. 
+      We truly appreciate your support and look forward to providing you 
+      with an outstanding experience. 
+    </p>
+
+    <!-- Buttons -->
+    <div class="action-buttons">
+      <a href="{% url 'home' %}" class="btn-custom btn-primary">
+        Go to Homepage
+      </a>
+      <!-- Optional Secondary Link (e.g. view profile or more) -->
+      <a href="#" class="btn-custom btn-outline">
+        View Your Dashboard
+      </a>
+    </div>
+
+    <!-- Optional note -->
+    <div class="extra-info">
+      <p>
+        Questions or concerns? 
+        <a href="#" style="color: var(--primary-color);">Contact us</a> 
+        anytime!
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Right-Click Disable (Optional) -->
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+{% endblock %}

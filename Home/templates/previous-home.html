@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<!-- Bootstrap CSS (adjust version if needed) -->
+<link 
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  /* Global Typography & Background */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f1f7ff 0%, #d9e4f5 100%);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Carousel - Full Width */
+  .carousel {
+    margin-bottom: 2rem; /* spacing below the carousel */
+  }
+
+  /* Carousel Item with Background Image */
+  .carousel-item {
+    height: 70vh; /* adjusts the vertical height of the slides */
+    min-height: 400px; /* ensures a reasonable min height */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Dark overlay to make text more readable */
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background: rgba(0,0,0,0.4); 
+  }
+
+  /* Slide Content (text/button) */
+  .carousel-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .carousel-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .carousel-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .carousel-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .carousel-container .btn:hover {
+    background: #0056b3 !important;
+  }
+
+  /* Courses Section */
+  #courses {
+    padding: 2rem 0;
+  }
+
+  /* Course Cards */
+  .course-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background-color: #fff;
+  }
+
+  .course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+  .badge-success {
+    background-color: #28a745; /* Premium */
+  }
+  .badge-danger {
+    background-color: #dc3545; /* Free */
+  }
+
+  /* Card Titles & Descriptions */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0.75rem 0;
+  }
+  .card-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* "View Course" Button */
+  .btn-primary {
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<!-- ======================
+     CAROUSEL / SLIDER
+====================== -->
+<div id="heroCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators (the small dots at bottom of carousel) -->
+  <ol class="carousel-indicators">
+    <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#heroCarousel" data-slide-to="1"></li>
+    <li data-target="#heroCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Carousel Content -->
+  <div class="carousel-inner">
+
+    <!-- Slide #1 -->
+    <div 
+      class="carousel-item active"
+      style="background-image: url('');"
+    >
+      <div class="carousel-container">
+        <h1>Welcome to Our Courses</h1>
+        <p>Boost your career and learn new skills with our extensive course library.</p>
+        <a href="#courses" class="btn btn-primary">Explore Now</a>
+      </div>
+    </div>
+
+    <!-- Slide #2 -->
+    <div
+      class="carousel-item"
+      style="background-image: url('https://images.unsplash.com/photo-1537432376769-00c603fc05c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1640&q=80');"
+    >
+      <div class="carousel-container">
+        <h1>Free & Premium Options</h1>
+        <p>Choose from our range of free courses or unlock premium features.</p>
+        <a href="#courses" class="btn btn-success">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Slide #3 -->
+    <div
+      class="carousel-item"
+      style="background-image: url('https://images.unsplash.com/photo-1595502125297-38ed66baf8f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1640&q=80');"
+    >
+      <div class="carousel-container">
+        <h1>Grow Your Skills</h1>
+        <p>Stay ahead in your field with expert-led courses and hands-on projects.</p>
+        <a href="#courses" class="btn btn-info">View Courses</a>
+      </div>
+    </div>
+
+  </div> <!-- /.carousel-inner -->
+
+  <!-- Carousel Controls (prev/next) -->
+  <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+<!-- ======================
+     COURSES SECTION
+====================== -->
+<div id="courses" class="container">
+  <div class="row">
+    {% for c in courses %}
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card course-card w-100">
+          <img 
+            src="/media/{{ c.course_image }}" 
+            class="card-img-top" 
+            alt="Course Image"
+          />
+          <div class="card-body">
+            {% if c.is_premium %}
+              <span class="badge badge-success mb-2">Premium</span>
+            {% else %}
+              <span class="badge badge-danger mb-2">Free</span>
+            {% endif %}
+            <h5 class="card-title">{{ c.course_name }}</h5>
+            <p class="card-description">
+              {{ c.course_description|safe }}
+            </p>
+            <a href="{% url 'course' c.slug %}" class="btn btn-primary mt-3">
+              View Course
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery (required for Carousel) -->
+<script 
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+  crossorigin="anonymous"
+></script>
+<script 
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RD1n3GMCe2eyJ6IvGVDxV02EiJ7z7M4BDXb1xjFj+fTh7CgtGA" 
+  crossorigin="anonymous"
+></script>
+<script 
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTzB18C3k9btrda4RX8rWdvE2zJZ2KMqkY0x0vLaRIBb5h1Lz"
+  crossorigin="anonymous"
+></script>
+
+{% endblock %}
