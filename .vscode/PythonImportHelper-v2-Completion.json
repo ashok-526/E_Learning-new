@@ -89,35 +89,35 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
         "isExtraImport": true,
         "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -442,7 +442,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nfrom dotenv import load_dotenv\nimport os\nload_dotenv()\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY')\nSTRIPE_SECRET_KEY= os.environ.get('STRIPE_SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.environ.get('SECRET_KEY', 'your-fallback-secret-key')\nSTRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')\nDEBUG = False  # Remember: Django won't serve static or media files when DEBUG=False\nALLOWED_HOSTS = [\n    '.vercel.app',\n    '127.0.0.1',\n    '.now.sh'\n    # Add your domain or IP if needed\n]",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -451,7 +451,16 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY')\nSTRIPE_SECRET_KEY= os.environ.get('STRIPE_SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'your-fallback-secret-key')\nSTRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')\nDEBUG = False  # Remember: Django won't serve static or media files when DEBUG=False\nALLOWED_HOSTS = [\n    '.vercel.app',\n    '127.0.0.1',\n    '.now.sh'\n    # Add your domain or IP if needed\n]\n# Application definition",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_SECRET_KEY",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')\nDEBUG = False  # Remember: Django won't serve static or media files when DEBUG=False\nALLOWED_HOSTS = [\n    '.vercel.app',\n    '127.0.0.1',\n    '.now.sh'\n    # Add your domain or IP if needed\n]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -460,7 +469,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = False  # Remember: Django won't serve static or media files when DEBUG=False\nALLOWED_HOSTS = [\n    '.vercel.app',\n    '127.0.0.1',\n    '.now.sh'\n    # Add your domain or IP if needed\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -469,7 +478,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'Home',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    '.vercel.app',\n    '127.0.0.1',\n    '.now.sh'\n    # Add your domain or IP if needed\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -496,7 +505,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "ROOT_URLCONF = 'E_Learning.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "peekOfCode": "ROOT_URLCONF = 'E_Learning.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # custom templates folder\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -505,7 +514,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # custom templates folder\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -514,7 +523,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'E_Learning.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = 'E_Learning.wsgi.application'\n# Database\n# Replace these credentials with environment variables for better security\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'wwUqitethUBAqtCAvPhZKFetStSjDfDS',\n        'HOST': 'junction.proxy.rlwy.net',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -523,7 +532,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'wwUqitethUBAqtCAvPhZKFetStSjDfDS',\n        'HOST': 'junction.proxy.rlwy.net',\n        'PORT': '54742',\n    }\n}",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -541,7 +550,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -550,7 +559,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -559,7 +568,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -568,16 +577,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [",
-        "detail": "E_Learning.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_ROOT",
-        "kind": 5,
-        "importPath": "E_Learning.settings",
-        "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_ROOT = 'staticfiles'\nSTATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly",
+        "peekOfCode": "USE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -586,7 +586,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\n# Remove the following line if it's not needed\n# STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -595,7 +595,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Update STATICFILES_DIRS to point to an existing directory\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -604,16 +604,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'public/static'),  # Update the path accordingly\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
-        "detail": "E_Learning.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "E_Learning.settings",
-        "description": "E_Learning.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Update the path accordingly\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -622,7 +613,16 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -640,7 +640,7 @@
         "kind": 5,
         "importPath": "E_Learning.urls",
         "description": "E_Learning.urls",
-        "peekOfCode": "urlpatterns = [\n    path('' , include('Home.urls')),\n    path('admin/', admin.site.urls),\n]\nif settings.DEBUG:\n    urlpatterns+= static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)\nurlpatterns+= staticfiles_urlpatterns()",
+        "peekOfCode": "urlpatterns = [\n    path('', include('Home.urls')),\n    path('admin/', admin.site.urls),\n]\n# Only serve static and media files during development (DEBUG = True)\nif settings.DEBUG:\n    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n# This line helps automatically serve files in STATICFILES_DIRS when DEBUG=True\nurlpatterns += staticfiles_urlpatterns()",
         "detail": "E_Learning.urls",
         "documentation": {}
     },
@@ -649,7 +649,7 @@
         "kind": 5,
         "importPath": "E_Learning.wsgi",
         "description": "E_Learning.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()\napp=application",
         "detail": "E_Learning.wsgi",
         "documentation": {}
     },
