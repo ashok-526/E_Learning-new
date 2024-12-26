@@ -112,17 +112,18 @@ USE_TZ = True
 # STATIC FILES
 # These settings work fine in development. In production, you typically use Whitenoise or a web server.
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') 
 
-# Make sure the path below actually exists. If it doesn’t, create it or change the path.
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'public',  'static'),
-]
+if DEBUG:
+    # During development, serve static files from the `public/static` directory
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]
+else:
+    # In production, collect all static files into `staticfiles`
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-# MEDIA FILES
+# Media files (Uploaded by users)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 # Default primary key field type
