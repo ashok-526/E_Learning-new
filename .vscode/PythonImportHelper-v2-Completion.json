@@ -550,7 +550,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -559,7 +559,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -568,7 +568,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -577,7 +577,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES",
+        "peekOfCode": "USE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -586,7 +586,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -595,7 +595,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') \n# Make sure the path below actually exists. If it doesn’t, create it or change the path.\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR,'public',  'static'),\n]\n# MEDIA FILES\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },

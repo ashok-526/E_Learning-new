@@ -112,7 +112,7 @@ USE_TZ = True
 # STATIC FILES
 # These settings work fine in development. In production, you typically use Whitenoise or a web server.
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build') 
 
 # Make sure the path below actually exists. If it doesn’t, create it or change the path.
 STATICFILES_DIRS = [
