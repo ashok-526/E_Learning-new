@@ -539,7 +539,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'E_Learning.wsgi.application'\n# Database\n# Replace these credentials with environment variables for better security\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'zlFcNzREGmCQonbOyNWExLckQYzliUhu',\n        'HOST': 'autorack.proxy.rlwy.net',",
+        "peekOfCode": "WSGI_APPLICATION = 'E_Learning.wsgi.application'\n# Database\n# Replace these credentials with environment variables for better security\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'ddBNwXYvIwoJeTZmVEwpMNXRLLBVLGOv',\n        'HOST': 'autorack.proxy.rlwy.net',",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -548,7 +548,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'zlFcNzREGmCQonbOyNWExLckQYzliUhu',\n        'HOST': 'autorack.proxy.rlwy.net',\n        'PORT': '55491',\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'railway',\n        'USER': 'postgres',\n        'PASSWORD': 'ddBNwXYvIwoJeTZmVEwpMNXRLLBVLGOv',\n        'HOST': 'autorack.proxy.rlwy.net',\n        'PORT': '28053',\n    }\n}",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
