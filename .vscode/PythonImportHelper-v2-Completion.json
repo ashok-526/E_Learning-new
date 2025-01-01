@@ -512,7 +512,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'E_Learning.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -566,7 +566,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nif DEBUG:\n    # During development, serve static files from the `public/static` directory\n    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\n    # In production, collect all static files into `staticfiles`",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -575,7 +575,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nif DEBUG:\n    # During development, serve static files from the `public/static` directory\n    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\nelse:",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -584,7 +584,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nif DEBUG:\n    # During development, serve static files from the `public/static` directory\n    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\nelse:\n    # In production, collect all static files into `staticfiles`",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -593,7 +593,7 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "USE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\nif DEBUG:\n    # During development, serve static files from the `public/static` directory\n    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\nelse:\n    # In production, collect all static files into `staticfiles`\n    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "peekOfCode": "USE_TZ = True\n# STATIC FILES\n# These settings work fine in development. In production, you typically use Whitenoise or a web server.\nSTATIC_URL = '/static/'\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },
@@ -602,7 +602,16 @@
         "kind": 5,
         "importPath": "E_Learning.settings",
         "description": "E_Learning.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nif DEBUG:\n    # During development, serve static files from the `public/static` directory\n    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\nelse:\n    # In production, collect all static files into `staticfiles`\n    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
+        "peekOfCode": "STATIC_URL = '/static/'\n    # During development, serve static files from the `public/static` directory\n# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]\n    # In production, collect all static files into `staticfiles`\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_Learning.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "E_Learning.settings",
+        "description": "E_Learning.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Media files (Uploaded by users)\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "E_Learning.settings",
         "documentation": {}
     },

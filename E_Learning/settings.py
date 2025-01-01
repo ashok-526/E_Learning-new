@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -101,6 +102,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATICFILES_STORAGE= "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
@@ -113,12 +116,11 @@ USE_TZ = True
 # These settings work fine in development. In production, you typically use Whitenoise or a web server.
 STATIC_URL = '/static/'
 
-if DEBUG:
+
     # During development, serve static files from the `public/static` directory
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]
-else:
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'public/static')]
     # In production, collect all static files into `staticfiles`
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media files (Uploaded by users)
 MEDIA_URL = '/media/'
